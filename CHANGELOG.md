@@ -3,6 +3,6 @@
 * Allow mocking classes with final __wakeup() method
 * Quick definitions are now always `byDefault`
 * Allow mocking of protected methods with `shouldAllowMockingProtectedMethods`
-* Support offical Hamcrest package
+* Support official Hamcrest package
 * Generator completely rewritten
 * Easily create named mocks with namedMock
