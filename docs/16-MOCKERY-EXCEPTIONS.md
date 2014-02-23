@@ -1,5 +1,5 @@
-Mockery Exceptions
-------------------
+# Mockery Exceptions
+
 
 Mockery throws three types of exceptions when it cannot verify a mock object.
 
@@ -33,7 +33,7 @@ ordered() and globally() expectation modifiers. It offers the following methods:
 + getMockName() - return the name of the mock object
 + getMethodName() - return the name of the method the failing expectation is attached to
 + getExpectedOrder() - returns an integer represented the expected index for which this call was expected
-+ getActualOrder() - return the actual index at which this method call occured.
++ getActualOrder() - return the actual index at which this method call occurred.
 
 ### \Mockery\Exception\NoMatchingExpectationException
 

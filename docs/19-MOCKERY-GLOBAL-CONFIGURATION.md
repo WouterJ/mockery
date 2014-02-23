@@ -1,5 +1,5 @@
-Mockery Global Configuration
-----------------------------
+# Mockery Global Configuration
+
 
 To allow for a degree of fine-tuning, Mockery utilises a singleton configuration
 object to store a small subset of core behaviours. The three currently present

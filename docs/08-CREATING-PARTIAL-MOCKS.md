@@ -1,5 +1,5 @@
-Creating Partial Mocks
-----------------------
+# Creating Partial Mocks
+
 
 Partial mocks are useful when you only need to mock several methods of
 an object leaving the remainder free to respond to calls normally (i.e.

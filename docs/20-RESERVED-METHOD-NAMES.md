@@ -1,5 +1,5 @@
-Reserved Method Names
----------------------
+# Reserved Method Names
+
 
 As you may have noticed, Mockery uses a number of methods called directly on
 all mock objects, for example shouldReceive(). Such methods are necessary

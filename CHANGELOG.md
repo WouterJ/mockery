@@ -1,4 +1,7 @@
-# 0.9.0 (2014-02-05)
+# Change Log
+
+
+## 0.9.0 (2014-02-05)
 
 * Allow mocking classes with final __wakeup() method
 * Quick definitions are now always `byDefault`

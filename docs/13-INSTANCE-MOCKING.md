@@ -1,5 +1,5 @@
-Instance Mocking
-----------------
+# Instance Mocking
+
 
 Instance mocking means that a statement like:
 

@@ -1,5 +1,5 @@
-Mocking Public Properties
--------------------------
+# Mocking Public Properties
+
 
 Mockery allows you to mock properties in several ways. The simplest is that
 you can simply set a public property and value on any mock object. The second

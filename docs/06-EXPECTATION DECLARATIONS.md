@@ -1,5 +1,5 @@
-Expectation Declarations
-------------------------
+# Expectation Declarations
+
 
 Once you have created a mock object, you'll often want to start defining how
 exactly it should behave (and how it should be called). This is where the

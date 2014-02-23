@@ -1,6 +1,5 @@
+# Quick Examples
 
-Quick Examples
---------------
 
 Create a mock object to return a sequence of values from a set of method calls.
 

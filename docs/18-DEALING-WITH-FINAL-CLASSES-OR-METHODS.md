@@ -1,5 +1,5 @@
-Dealing with Final Classes/Methods
-----------------------------------
+# Dealing with Final Classes/Methods
+
 
 One of the primary restrictions of mock objects in PHP, is that mocking classes
 or methods marked final is hard. The final keyword prevents methods so marked

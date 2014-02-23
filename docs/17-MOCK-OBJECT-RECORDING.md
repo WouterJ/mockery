@@ -1,5 +1,5 @@
-Mock Object Recording
----------------------
+# Mock Object Recording
+
 
 In certain cases, you may find that you are testing against an already
 established pattern of behaviour, perhaps during refactoring. Rather then hand

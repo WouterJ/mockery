@@ -1,17 +1,17 @@
-Installation
-------------
+# Installation
 
-Mockery may be installed using Composer, PEAR or by cloning it from its GitHub repository. These
-three options are outlined below.
 
-**Composer**
+Mockery may be installed using Composer, PEAR or by cloning it from its GitHub repository.
+These three options are outlined below.
 
-You can read more about Composer and its main repository at
-[http://packagist.org](http://packagist.org "Packagist"). To install
-Mockery using Composer, first install Composer for your project using the instructions on the
-Packagist home page. You can then define your development dependency on Mockery using the
-suggested parameters below. While every effort is made to keep the master branch
-stable, you may prefer to use the current stable version tag instead.
+
+## Composer
+
+You can read more about Composer and its [main repository](https://github.com/composer/composer).
+To install Mockery using Composer, first install Composer for your project using the instructions
+on the [Packagist](https://packagist.org) home page. You can then define your development
+dependency on Mockery using the suggested parameters below. While every effort is made to keep
+the master branch stable, you may prefer to use the current stable version tag instead.
 
     {
         "require-dev": {
@@ -26,7 +26,8 @@ To install, you then may call:
 This will install Mockery as a development dependency but will not install it
 for regular non-development installs.
 
-**PEAR**
+
+## PEAR
 
 Mockery is hosted on the [survivethedeepend.com](http://pear.survivethedeepend.com) PEAR channel and
 can be installed using the following commands:
@@ -35,7 +36,8 @@ can be installed using the following commands:
     sudo pear channel-discover hamcrest.googlecode.com/svn/pear
     sudo pear install --alldeps deepend/Mockery
 
-**Git / GitHub**
+
+## Git
 
 The git repository hosts the development version in its master branch. You can
 install this using Composer by referencing dev-master as your preferred version

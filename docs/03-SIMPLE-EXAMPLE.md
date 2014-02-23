@@ -1,5 +1,5 @@
-Simple Example
---------------
+# Simple Example
+
 
 Imagine we have a Temperature class which samples the temperature of a locale
 before reporting an average temperature. The data could come from a web service

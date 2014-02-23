@@ -1,5 +1,5 @@
-Preserving Pass-By-Reference Method Parameter Behaviour
--------------------------------------------------------
+# Preserving Pass-By-Reference Method Parameter Behaviour
+
 
 PHP Class method may accept parameters by reference. In this case, changes made
 to the parameter (a reference to the original variable passed to the method) are

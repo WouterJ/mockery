@@ -1,5 +1,5 @@
-Gotchas!
---------
+# Gotchas!
+
 
 Mocking objects in PHP has its limitations and gotchas. Some functionality can't
 be mocked or can't be mocked YET! If you locate such a circumstance, please please

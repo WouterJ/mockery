@@ -1,5 +1,5 @@
-Quick Reference
----------------
+# Quick Reference
+
 
 Mockery implements a shorthand API when creating a mock. Here's a sampling
 of the possible startup methods.
