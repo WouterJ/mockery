@@ -12,7 +12,8 @@ specific information which is also passed along in the exception message but is 
 separately from getters should they
 be useful when logging or reformatting output.
 
-### \Mockery\Exception\InvalidCountException
+
+## \Mockery\Exception\InvalidCountException
 
 The exception class is used when a method is called too many (or too few) times
 and offers the following methods:
@@ -24,7 +25,8 @@ and offers the following methods:
 + getExpectedCountComparative() - returns a string, e.g. "<=" used to compare to actual count
 + getActualCount() - return actual calls made with given argument constraints
 
-### \Mockery\Exception\InvalidOrderException
+
+## \Mockery\Exception\InvalidOrderException
 
 The exception class is used when a method is called outside the expected order set using the
 ordered() and globally() expectation modifiers. It offers the following methods:
@@ -35,7 +37,8 @@ ordered() and globally() expectation modifiers. It offers the following methods:
 + getExpectedOrder() - returns an integer represented the expected index for which this call was expected
 + getActualOrder() - return the actual index at which this method call occurred.
 
-### \Mockery\Exception\NoMatchingExpectationException
+
+## \Mockery\Exception\NoMatchingExpectationException
 
 The exception class is used when a method call does not match any known expectation.
 All expectations are uniquely identified in a mock object by the method name and the list

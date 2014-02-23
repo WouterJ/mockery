@@ -46,7 +46,7 @@ $loader = new \Mockery\Loader;
 $loader->register();
 ```
 
-If you are using Composer, you can simiplify this to just including the Composer generated autoloader file:
+If you are using Composer, you can simplify this to just including the Composer generated autoloader file:
 
 ```PHP
 require __DIR__ . '/../vendor/autoload.php'; // assuming vendor is one directory up
@@ -79,10 +79,11 @@ If you are using PHPUnit's XML configuration approach, you can include the follo
 Make sure Composer's or Mockery's autoloader is present in the bootstrap file or you will need to also define a
 "file" attribute pointing to the file of the above TestListener class.
 
-### Warning: PHPUnit running tests in separate processes
+
+## Warning: PHPUnit running tests in separate processes
 
 PHPUnit provides a functionality that allows [tests to run in a separated process]
-(http://phpunit.de/manual/3.7/en/appendixes.annotations.html#appendixes.annotations.runTestsInSeparateProcesses),
+(http://phpunit.de/manual/4.0/en/appendixes.annotations.html#appendixes.annotations.runTestsInSeparateProcesses),
 to ensure better isolation. Mockery verifies the mocks expectations using the
 `Mockery::close` method, and provides a PHPUnit listener, that automatically
 calls this method for you after every test.

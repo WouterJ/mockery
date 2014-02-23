@@ -12,7 +12,8 @@ of mocking.
 2. Passive Partial Mock
 3. Proxied Partial Mock
 
-### Traditional Partial Mock
+
+## Traditional Partial Mock
 
 A traditional partial mock defined ahead of time which methods of a class
 are to be mocked and which are to left unmocked (i.e. callable as normal).
@@ -33,7 +34,8 @@ methods may rely on those!
 $mock = \Mockery::mock("MyNamespace\MyClass[foo]", array($arg1, $arg2));
 ```
 
-### Passive Partial Mock
+
+## Passive Partial Mock
 
 A passive partial mock is more of a default state of being.
 
@@ -51,7 +53,8 @@ which methods to mock in advance. The makePartial() method is identical to the
 original shouldDeferMissing() method which first introduced this Partial Mock
 type.
 
-### Proxied Partial Mock
+
+## Proxied Partial Mock
 
 A proxied partial mock is a partial of last resort. You may encounter
 a class which is simply not capable of being mocked because it has
@@ -71,7 +74,8 @@ limitations. The tradeoff should be obvious - a proxied partial will
 fail any typehint checks for the class being mocked since it cannot
 extend that class.
 
-#### Special Internal Cases
+
+## Special Internal Cases
 
 All mock objects, with the exception of Proxied Partials, allow you to make any
 expectation call the underlying real class method using the passthru() expectation

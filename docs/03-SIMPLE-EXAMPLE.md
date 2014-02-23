@@ -56,5 +56,3 @@ class TemperatureTest extends PHPUnit_Framework_TestCase
 
 }
 ```
-
-We'll cover the API in greater detail below.

@@ -174,7 +174,8 @@ type, that are actually different classes.
 *Warning*: You can only create a named mock once, any subsequent calls to
 `namedMock`, with different arguments are likely to cause exceptions.
 
-### Behaviour Modifiers
+
+## Behaviour Modifiers
 
 When creating a mock object, you may wish to use some commonly preferred behaviours
 that are not the default in Mockery.

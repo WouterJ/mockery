@@ -6,6 +6,7 @@
 The generator was completely rewritten, so any code with a deep integration to
 mockery will need evaluating
 
+
 ## Upgrading to 0.8
 
 Since the release of 0.8.0 the following behaviours were altered:
