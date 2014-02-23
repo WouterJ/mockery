@@ -23,14 +23,15 @@ that would help others.
 
 ## Contributing code and documentation
 
-* Fork the [repository](https://github.com/padraic/mockery) on github.
-* Add some tests for your feature or bug
+* Fork the [repository](https://github.com/padraic/mockery) on GitHub
 * Add the code for your feature or bug
+* Add some tests for your feature or bug
 * Optionally, but preferably, write some documentation (currently in README.md)
-* Optionally update the CHANGELOG.md file with your feature or
+* Optionally, update the CHANGELOG.md file with your feature or
   [BC](http://en.wikipedia.org/wiki/Backward_compatibility) break
 * Send a [Pull
-  Request](https://help.github.com/articles/creating-a-pull-request) to the correct target branch (see below)
+  Request](https://help.github.com/articles/creating-a-pull-request) to the
+  correct target branch (see below)
 
 If you have a big change or would like to discuss something, create an issue in
 the [issue tracker](https://github.com/padraic/mockery/issues) or jump in to
@@ -43,7 +44,7 @@ License](http://opensource.org/licenses/BSD-3-Clause).
 
 Mockery may have several active branches at any one time and roughly follows a
 [Git Branching Model](https://igor.io/2013/10/21/git-branching-model.html).
-Generally, if you're developing a new feature, you want to be targetting the
+Generally, if you're developing a new feature, you want to be targeting the
 master branch, if it's a bug fix, you want to be targeting a release branch,
 e.g. 0.8.
 
@@ -54,9 +55,8 @@ the instructions at [http://getcomposer.org/download/](http://getcomposer.org/do
 then install the dependencies with `php /path/to/composer.phar install --dev`.
 
 This will install the required PHPUnit and Hamcrest dev dependencies and create the
-autoload files required by the unit tests. Navigate to the "tests" directory and run the
-`vendor/bin/phpunit` command to run the unit tests. With a wee bit of luck, there will be
-no failed tests!
+autoload files required by the unit tests. You may run the `vendor/bin/phpunit` command
+to run the unit tests. If everything goes to plan, there will be no failed tests!
 
 # Debugging Mockery
 
