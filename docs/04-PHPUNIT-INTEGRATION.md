@@ -45,13 +45,15 @@ $loader = new \Mockery\Loader;
 $loader->register();
 ```
 
-If you are using Composer, you can simplify this to just including the Composer generated autoloader file:
+If you are using Composer, you can simplify this to just including the Composer generated autoloader
+file:
 
 ```PHP
 require __DIR__ . '/../vendor/autoload.php'; // assuming vendor is one directory up
 ```
 
-(Note: Prior to Hamcrest 1.0.0, the `Hamcrest.php` file name had a small "h" (i.e. `hamcrest.php`). If upgrading Hamcrest to 1.0.0 remember to check the file name is updated for all your projects.)
+(Note: Prior to Hamcrest 1.0.0, the `Hamcrest.php` file name had a small "h" (i.e. `hamcrest.php`).
+If upgrading Hamcrest to 1.0.0 remember to check the file name is updated for all your projects.)
 
 To integrate Mockery into PHPUnit and avoid having to call the close method and
 have Mockery remove itself from code coverage reports, use this in you suite:
@@ -68,15 +70,17 @@ $result->addListener(new \Mockery\Adapter\Phpunit\TestListener());
 $suite->run($result);
 ```
 
-If you are using PHPUnit's XML configuration approach, you can include the following to load the `TestListener`:
+If you are using PHPUnit's XML configuration approach, you can include the following to load the
+`TestListener`:
+
 ``` XML
 <listeners>
     <listener class="\Mockery\Adapter\Phpunit\TestListener"></listener>
 </listeners>
 ```
 
-Make sure Composer's or Mockery's autoloader is present in the bootstrap file or you will need to also define a
-"file" attribute pointing to the file of the above `TestListener` class.
+Make sure Composer's or Mockery's autoloader is present in the bootstrap file or you will need to
+also define a "file" attribute pointing to the file of the above `TestListener` class.
 
 
 ## Warning: PHPUnit running tests in separate processes
