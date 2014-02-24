@@ -1,7 +1,6 @@
 # PHP Magic Methods
 
-
-PHP magic methods which are prefixed with a double underscore, e.g. _set(), pose
+PHP magic methods which are prefixed with a double underscore, e.g. `__set()`, pose
 a particular problem in mocking and unit testing in general. It is strongly
 recommended that unit tests and mock objects do not directly refer to magic
 methods. Instead, refer only to the virtual methods and properties these magic

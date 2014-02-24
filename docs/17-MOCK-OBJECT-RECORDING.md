@@ -1,6 +1,5 @@
 # Mock Object Recording
 
-
 In certain cases, you may find that you are testing against an already
 established pattern of behaviour, perhaps during refactoring. Rather then hand
 crafting mock object expectations for this behaviour, you could instead use
@@ -19,18 +18,22 @@ mock (which will replace Subject later) all the calls and return values of
 a Subject instance when interacting with SubjectUser.
 
 ```PHP
-class Subject {
+class Subject
+{
 
     public function execute() {
         return 'executed!';
     }
+
 }
 
-class SubjectUser {
+class SubjectUser
+{
 
     public function use(Subject $subject) {
         return $subject->execute();
     }
+
 }
 ```
 
@@ -65,11 +68,11 @@ class SubjectUserTest extends PHPUnit_Framework_TestCase
 }
 ```
 
-After the \Mockery::close() call in tearDown() validates the mock object, we
-should have zero exceptions if NewSubjectUser acted on Subject in a similar way
-to SubjectUser. By default the order of calls are not enforced, and loose argument
-matching is enabled, i.e. arguments may be equal (==) but not necessarily identical
-(===).
+After the `\Mockery::close()` call in `tearDown()` validates the mock object, we
+should have zero exceptions if `NewSubjectUser` acted on `Subject` in a similar way
+to `SubjectUser`. By default the order of calls are not enforced, and loose argument
+matching is enabled, i.e. arguments may be equal (`==`) but not necessarily identical
+(`===`).
 
 If you wished to be more strict, for example ensuring the order of calls
 and the final call counts were identical, or ensuring arguments are completely

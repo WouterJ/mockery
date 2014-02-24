@@ -1,13 +1,13 @@
 # Mockery Global Configuration
 
-
 To allow for a degree of fine-tuning, Mockery utilises a singleton configuration
 object to store a small subset of core behaviours. The three currently present
 include:
 
 * Option to allow/disallow the mocking of methods which do not actually exist
 * Option to allow/disallow the existence of expectations which are never fulfilled (i.e. unused)
-* Setter/Getter for added a parameter map for internal PHP class methods (Reflection cannot detect these automatically)
+* Setter/Getter for added a parameter map for internal PHP class methods (Reflection
+  cannot detect these automatically)
 
 By default, the first two behaviours are enabled. Of course, there are situations where
 this can lead to unintended consequences. The mocking of non-existent methods

@@ -1,17 +1,16 @@
 # Argument Validation
 
-
-The arguments passed to the with() declaration when setting up an expectation
+The arguments passed to the `with()` declaration when setting up an expectation
 determine the criteria for matching method calls to expectations. Thus, you
 can setup up many expectations for a single method, each differentiated by
 the expected arguments. Such argument matching is done on a "best fit" basis.
 This ensures explicit matches take precedence over generalised matches.
 
 An explicit match is merely where the expected argument and the actual argument
-are easily equated (i.e. using === or ==). More generalised matches are possible
+are easily equated (i.e. using `===` or `==`). More generalised matches are possible
 using regular expressions, class hinting and the available generic matchers. The
 purpose of generalised matchers is to allow arguments be defined in non-explicit
-terms, e.g. Mockery::any() passed to with() will match ANY argument in that
+terms, e.g. `Mockery::any()` passed to `with()` will match **any** argument in that
 position.
 
 Mockery's generic matchers do not cover all possibilities but offers optional
@@ -29,8 +28,8 @@ Here's a sample of the possibilities.
 with(1)
 ```
 
-Matches the integer 1. This passes the === test (identical). It does facilitate
-a less strict == check (equals) where the string '1' would also match the
+Matches the integer 1. This passes the `===` test (identical). It does facilitate
+a less strict `==` check (equals) where the string `'1'` would also match the
 argument.
 
 ```PHP
@@ -44,14 +43,14 @@ slot is passed unconstrained.
 with(\Mockery::type('resource')) OR with(resourceValue()) OR with(typeOf('resource'))
 ```
 
-Matches any resource, i.e. returns true from an is_resource() call. The Type
-matcher accepts any string which can be attached to "is_" to form a valid
-type check. For example, \Mockery::type('float') or Hamcrest's floatValue() and
-typeOf('float') checks using is_float(), and \Mockery::type('callable') or Hamcrest's
-callable() uses is_callable().
+Matches any resource, i.e. returns true from an `is_resource()` call. The Type
+matcher accepts any string which can be attached to `is_` to form a valid
+type check. For example, `\Mockery::type('float')` or Hamcrest's `floatValue()` and
+`typeOf('float')` checks using `is_float()`, and `\Mockery::type('callable')` or Hamcrest's
+`callable()` uses `is_callable()`.
 
-The Type matcher also accepts a class or interface name to be used in an instanceof
-evaluation of the actual argument (similarly Hamcrest uses anInstanceOf()).
+The Type matcher also accepts a class or interface name to be used in an `instanceof`
+evaluation of the actual argument (similarly Hamcrest uses `anInstanceOf()`).
 
 You may find a full list of the available type checkers at
 http://www.php.net/manual/en/ref.var.php or browse Hamcrest's function list at
@@ -62,7 +61,7 @@ with(\Mockery::on(closure))
 ```
 
 The On matcher accepts a closure (anonymous function) to which the actual argument
-will be passed. If the closure evaluates to (i.e. returns) boolean TRUE then
+will be passed. If the closure evaluates to (i.e. returns) boolean `TRUE` then
 the argument is assumed to have matched the expectation. This is invaluable
 where your argument expectation is a bit too complex for or simply not
 implemented in the current default matchers.
@@ -75,10 +74,10 @@ with('/^foo/') OR with(matchesPattern('/^foo/'))
 
 The argument declarator also assumes any given string may be a regular
 expression to be used against actual arguments when matching. The regex option
-is only used when a) there is no === or == match and b) when the regex
-is verified to be a valid regex (i.e. does not return false from preg_match()).
+is only used when a) there is no `===` or `==` match and b) when the regex
+is verified to be a valid regex (i.e. does not return false from `preg_match()`).
 If the regex detection doesn't suit your tastes, Hamcrest offers the more
-explicit matchesPattern() function.
+explicit `matchesPattern()` function.
 
 ```PHP
 with(\Mockery::ducktype('foo', 'bar'))
@@ -97,7 +96,7 @@ with(\Mockery::mustBe(2)) OR with(identicalTo(2))
 The MustBe matcher is more strict than the default argument matcher. The default
 matcher allows for PHP type casting, but the MustBe matcher also verifies that
 the argument must be of the same type as the expected value. Thus by default,
-the argument '2' matches the actual argument 2 (integer) but the MustBe matcher
+the argument `'2'` matches the actual argument 2 (integer) but the MustBe matcher
 would fail in the same situation since the expected argument was a string and
 instead we got an integer.
 
@@ -137,7 +136,7 @@ enforces both key naming and values, i.e. both the key and value of each
 actual element is compared.
 
 There is no Hamcrest version of this functionality, though Hamcrest can check a
-single entry using hasEntry() or hasKeyValuePair().
+single entry using `hasEntry()` or `hasKeyValuePair()`.
 
 ```PHP
 with(\Mockery::contains(value1, value2))

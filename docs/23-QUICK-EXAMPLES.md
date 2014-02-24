@@ -1,6 +1,5 @@
 # Quick Examples
 
-
 Create a mock object to return a sequence of values from a set of method calls.
 
 ```PHP
@@ -65,7 +64,7 @@ class DbTest extends PHPUnit_Framework_TestCase
         $mock->shouldReceive('query')->andReturn(1, 2, 3);
         $mock->shouldReceive('update')->with(5)->andReturn(NULL)->once();
 
-        // test code here using the mock
+        // ... test code here using the mock
     }
 
 }
@@ -90,7 +89,7 @@ class DbTest extends PHPUnit_Framework_TestCase
         $mock->shouldReceive('query')->andReturn(1, 2, 3)->ordered();
         $mock->shouldReceive('update')->andReturn(NULL)->once()->ordered();
 
-        // test code here using the mock
+        // ... test code here using the mock
     }
 
 }
@@ -119,7 +118,7 @@ class DbTest extends PHPUnit_Framework_TestCase
         $db->shouldReceive('query')->with("/^....$/")->andReturn(3.3)->atLeast()->once()->ordered('queries');
         $db->shouldReceive('finish')->once()->ordered();
 
-        // test code here using the mock
+        // ... test code here using the mock
     }
 
 }

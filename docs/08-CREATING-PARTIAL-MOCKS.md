@@ -1,6 +1,5 @@
 # Creating Partial Mocks
 
-
 Partial mocks are useful when you only need to mock several methods of
 an object leaving the remainder free to respond to calls normally (i.e.
 as implemented). Mockery implements three distinct strategies for creating
@@ -23,9 +22,9 @@ The syntax for creating traditional mocks is:
 $mock = \Mockery::mock('MyClass[foo,bar]');
 ```
 
-In the above example, the foo() and bar() methods of MyClass will be
+In the above example, the `foo()` and `bar()` methods of MyClass will be
 mocked but no other MyClass methods are touched. You will need to define
-expectations for the foo() and bar() methods to dictate their mocked behaviour.
+expectations for the `foo()` and `bar()` methods to dictate their mocked behaviour.
 
 Don't forget that you can pass in constructor arguments since unmocked
 methods may rely on those!
@@ -44,13 +43,13 @@ $mock = \Mockery::mock('MyClass')->makePartial();
 ```
 
 In a passive partial, we assume that all methods will simply defer to
-the parent class (MyClass) original methods unless a method call
+the parent class (`MyClass`) original methods unless a method call
 matches a known expectation. If you have no matching expectation for
 a specific method call, that call is deferred to the class being
 mocked. Since the division between mocked and unmocked calls depends
 entirely on the expectations you define, there is no need to define
-which methods to mock in advance. The makePartial() method is identical to the
-original shouldDeferMissing() method which first introduced this Partial Mock
+which methods to mock in advance. The `makePartial()` method is identical to the
+original `shouldDeferMissing()` method which first introduced this Partial Mock
 type.
 
 

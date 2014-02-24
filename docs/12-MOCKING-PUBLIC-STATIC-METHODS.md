@@ -1,6 +1,5 @@
 # Mocking Public Static Methods
 
-
 Static methods are not called on real objects, so normal mock objects can't mock
 them. Mockery supports class aliased mocks, mocks representing a class name which
 would normally be loaded (via autoloading or a require statement) in the system
