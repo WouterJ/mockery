@@ -1,6 +1,5 @@
 # Expectation Declarations
 
-
 Once you have created a mock object, you'll often want to start defining how
 exactly it should behave (and how it should be called). This is where the
 Mockery expectation declarations take over.
@@ -45,9 +44,9 @@ with(arg1, arg2, ...) / withArgs(array(arg1, arg2, ...))
 Adds a constraint that this expectation only applies to method calls which
 match the expected argument list. You can add a lot more flexibility to argument
 matching using the built in matcher classes (see later). For example,
-\Mockery::any() matches any argument passed to that position in the with()
+`\Mockery::any()` matches any argument passed to that position in the `with()`
 parameter list. Mockery also allows Hamcrest library matchers - for example, the
-Hamcrest function anything() is equivalent to \Mockery::any().
+Hamcrest function `anything()` is equivalent to `\Mockery::any()`.
 
 It's important to note that this means all expectations attached only apply
 to the given method when it is called with these exact arguments. This allows for
@@ -91,7 +90,7 @@ mock object method call as returning NULL or nothing.
 andReturnValues(array)
 ```
 
-Alternative syntax for andReturn() that accepts a simple array instead of a list of parameters.
+Alternative syntax for `andReturn()` that accepts a simple array instead of a list of parameters.
 The order of return is determined by the numerical index of the given array with the last array
 member being return on all calls once previous return values are exhausted.
 
@@ -102,21 +101,21 @@ andReturnUsing(closure, ...)
 Sets a closure (anonymous function) to be called with the arguments passed to
 the method. The return value from the closure is then returned. Useful for some
 dynamic processing of arguments into related concrete results. Closures can
-queued by passing them as extra parameters as for andReturn(). Note that you
-cannot currently mix andReturnUsing() with andReturn().
+queued by passing them as extra parameters as for `andReturn()`. Note that you
+cannot currently mix `andReturnUsing()` with `andReturn()`.
 
 ```PHP
 andThrow(Exception)
 ```
 
-Declares that this method will throw the given Exception object when called.
+Declares that this method will throw the given `Exception` object when called.
 
 ```PHP
 andThrow(exception_name, message)
 ```
 
-Rather than an object, you can pass in the Exception class and message to
-use when throwing an Exception from the mocked method.
+Rather than an object, you can pass in the `Exception` class and message to
+use when throwing an `Exception` from the mocked method.
 
 ```PHP
 andSet(name, value1) / set(name, value1)
@@ -146,8 +145,8 @@ once()
 ```
 
 Declares that the expected method may only be called once. Like all other
-call count constraints, it will throw a \Mockery\CountValidator\Exception
-if breached and can be modified by the atLeast() and atMost() constraints.
+call count constraints, it will throw a `\Mockery\CountValidator\Exception`
+if breached and can be modified by the `atLeast()` and `atMost()` constraints.
 
 ```PHP
 twice()
@@ -172,14 +171,14 @@ atLeast()
 ```
 
 Adds a minimum modifier to the next call count expectation. Thus
-atLeast()->times(3) means the call must be called at least three times (given
+`atLeast()->times(3)` means the call must be called at least three times (given
 matching method args) but never less than three times.
 
 ```PHP
 atMost()
 ```
 Adds a maximum modifier to the next call count expectation. Thus
-atMost()->times(3) means the call must be called no more than three times. This
+`atMost()->times(3)` means the call must be called no more than three times. This
 also means no calls are acceptable.
 
 ```PHP
@@ -187,8 +186,8 @@ between(min, max)
 ```
 
 Sets an expected range of call counts. This is actually identical to using
-atLeast()->times(min)->atMost()->times(max) but is provided as a shorthand.
-It may be followed by a times() call with no parameter to preserve the
+`atLeast()->times(min)->atMost()->times(max)` but is provided as a shorthand.
+It may be followed by a `times()` call with no parameter to preserve the
 APIs natural language readability.
 
 ```PHP
@@ -213,7 +212,7 @@ method 2.
 globally()
 ```
 
-When called prior to ordered() or ordered(group), it declares this ordering to
+When called prior to `ordered()` or `ordered(group)`, it declares this ordering to
 apply across all mock objects (not just the current mock). This allows for dictating
 order expectations across multiple mocks.
 
@@ -224,7 +223,7 @@ byDefault()
 Marks an expectation as a default. Default expectations are applied unless
 a non-default expectation is created. These later expectations immediately
 replace the previously defined default. This is useful so you can setup default
-mocks in your unit test setup() and later tweak them in specific tests as
+mocks in your unit test `setup()` and later tweak them in specific tests as
 needed.
 
 ```PHP
