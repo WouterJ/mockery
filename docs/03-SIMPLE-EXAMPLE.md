@@ -32,7 +32,7 @@ When writing a test for the `Temperature` class, we can now substitute a mock
 object for the real service which allows us to test the behaviour of the
 `Temperature` class without actually needing a concrete service instance.
 
-Note: PHPUnit integration (see below) can remove the need for a `tearDown()` method.
+Note: PHPUnit integration (see next chapter) can remove the need for a `tearDown()` method.
 
 ```PHP
 use \Mockery as m;
