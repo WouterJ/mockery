@@ -10,20 +10,21 @@ You can read more about Composer on [getcomposer.org](https://getcomposer.org). 
 using Composer, first install Composer for your project using the instructions on the
 [Composer download page](https://getcomposer.org/download/). You can then define your development
 dependency on Mockery using the suggested parameters below. While every effort is made to keep the
-master branch stable, you may prefer to use the current stable version tag instead.
+master branch stable, you may prefer to use the current stable version tag instead (use the
+`@stable` tag).
 
     {
         "require-dev": {
-            "mockery/mockery": "dev-master@dev"
+            "mockery/mockery": "dev-master"
         }
     }
 
 To install, you then may call:
 
-    composer.phar install --dev
+    php composer.phar update
 
-This will install Mockery as a development dependency but will not install it
-for regular non-development installs.
+This will install Mockery as a development dependency, meaning it won't be installed when using
+`php composer.phar update --no-dev` in production.
 
 
 ## PEAR
