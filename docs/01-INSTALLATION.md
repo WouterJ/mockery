@@ -39,9 +39,9 @@ can be installed using the following commands:
 
 ## Git
 
-The git repository hosts the development version in its master branch. You can
-install this using Composer by referencing dev-master as your preferred version
-in your project's composer.json file as the earlier example shows.
+The Git repository hosts the development version in its master branch. You can
+install this using Composer by referencing `dev-master` as your preferred version
+in your project's `composer.json` file as the earlier example shows.
 
 You may also install this development version using PEAR:
 
