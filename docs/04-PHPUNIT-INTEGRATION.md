@@ -25,6 +25,7 @@ class SimpleTest extends PHPUnit_Framework_TestCase
     public function testSimpleMock() {
         $mock = m::mock('simplemock');
         $mock->shouldReceive('foo')->with(5, m::any())->once()->andReturn(10);
+
         $this->assertEquals(10, $mock->foo(5));
     }
 
@@ -41,6 +42,7 @@ the following to your test suite's `Bootstrap.php` or `TestHelper.php` file:
 ```PHP
 require_once 'Mockery/Loader.php';
 require_once 'Hamcrest/Hamcrest.php';
+
 $loader = new \Mockery\Loader;
 $loader->register();
 ```
@@ -59,10 +61,10 @@ To integrate Mockery into PHPUnit and avoid having to call the close method and
 have Mockery remove itself from code coverage reports, use this in you suite:
 
 ```PHP
-//Create Suite
+// Create Suite
 $suite = new PHPUnit_Framework_TestSuite();
 
-//Create a result listener or add it
+// Create a result listener or add it
 $result = new PHPUnit_Framework_TestResult();
 $result->addListener(new \Mockery\Adapter\Phpunit\TestListener());
 
