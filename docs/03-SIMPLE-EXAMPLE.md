@@ -1,11 +1,10 @@
 # Simple Example
 
-
-Imagine we have a Temperature class which samples the temperature of a locale
+Imagine we have a `Temperature` class which samples the temperature of a locale
 before reporting an average temperature. The data could come from a web service
 or any other data source, but we do not have such a class at present. We can,
 however, assume some basic interactions with such a class based on its interaction
-with the Temperature class.
+with the `Temperature` class.
 
 ```PHP
 class Temperature
@@ -29,11 +28,11 @@ class Temperature
 ```
 
 Even without an actual service class, we can see how we expect it to operate.
-When writing a test for the Temperature class, we can now substitute a mock
+When writing a test for the `Temperature` class, we can now substitute a mock
 object for the real service which allows us to test the behaviour of the
-Temperature class without actually needing a concrete service instance.
+`Temperature` class without actually needing a concrete service instance.
 
-Note: PHPUnit integration (see below) can remove the need for a tearDown() method.
+Note: PHPUnit integration (see below) can remove the need for a `tearDown()` method.
 
 ```PHP
 use \Mockery as m;
