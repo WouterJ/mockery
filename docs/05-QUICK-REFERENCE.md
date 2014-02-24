@@ -1,6 +1,5 @@
 # Quick Reference
 
-
 Mockery implements a shorthand API when creating a mock. Here's a sampling
 of the possible startup methods.
 
@@ -8,9 +7,9 @@ of the possible startup methods.
 $mock = \Mockery::mock('foo');
 ```
 
-Creates a mock object named foo. In this case, foo is a name (not necessarily
+Creates a mock object named "foo". In this case, "foo" is a name (not necessarily
 a class name) used as a simple identifier when raising exceptions. This creates
-a mock object of type \Mockery\Mock and is the loosest form of mock possible.
+a mock object of type `\Mockery\Mock` and is the loosest form of mock possible.
 
 ```PHP
 $mock = \Mockery::mock(array('foo'=>1,'bar'=>2));
@@ -25,7 +24,7 @@ $mock = \Mockery::mock('foo', array('foo'=>1,'bar'=>2));
 ```
 
 Similar to the previous examples and all examples going forward, expectation arrays
-can be passed for all mock objects as the second parameter to mock().
+can be passed for all mock objects as the second parameter to `mock()`.
 
 ```PHP
 $mock = \Mockery::mock('foo', function($mock) {
@@ -74,9 +73,9 @@ $mock = \Mockery::mock('overload:MyNamespace\MyClass');
 
 Prefixing the valid name of a class (which is NOT currently loaded) with "overload:" will
 generate an alias mock (as with "alias:") except that created new instances of that
-class will import any expectations set on the origin mock ($mock). The origin
+class will import any expectations set on the origin mock (`$mock`). The origin
 mock is never verified since it's used an expectation store for new instances. For this
-purpose I used the term "instance mock" to differentiate it from the simpler "alias mock".
+purpose we use the term "instance mock" to differentiate it from the simpler "alias mock".
 
 Note: Using alias/instance mocks across more than one test will generate a fatal error since
 you can't have two classes of the same name. To avoid this, run each test of this
@@ -94,14 +93,14 @@ convention to use for readability. All subsequent arguments remain unchanged fro
 previous examples.
 
 If the given class does not exist, you must define and include it beforehand or a
-\Mockery\Exception will be thrown.
+`\Mockery\Exception` will be thrown.
 
 ```PHP
 $mock = \Mockery::mock('MyNamespace\MyClass[foo,bar]');
 ```
 
-The syntax above tells Mockery to partially mock the MyNamespace\MyClass class,
-by mocking the foo() and bar() methods only. Any other method will be not be
+The syntax above tells Mockery to partially mock the `MyNamespace\MyClass` class,
+by mocking the `foo()` and `bar()` methods only. Any other method will be not be
 overridden by Mockery. This traditional form of "partial mock" can be applied to any class
 or abstract class (e.g. mocking abstract methods where a concrete implementation
 does not exist yet). If you attempt to partial mock a method marked final, it will
@@ -143,8 +142,8 @@ third param if used in conjunction with an expectation array).
 At times, you will discover that expectations on a mock include methods which need
 to return the same mock object (e.g. a common case when designing a Domain Specific
 Language (DSL) such as the one Mockery itself uses!). To facilitate this, calling
-\Mockery::self() will always return the last Mock Object created by calling
-\Mockery::mock(). For example:
+`\Mockery::self()` will always return the last Mock Object created by calling
+`\Mockery::mock()`. For example:
 
 ```PHP
 $mock = \Mockery::mock('BazIterator')
@@ -153,7 +152,7 @@ $mock = \Mockery::mock('BazIterator')
     ->mock();
 ```
 
-The above class being mocked, as the next() method suggests, is an iterator. In
+The above class being mocked, as the `next()` method suggests, is an iterator. In
 many cases, you can replace all the iterated elements (since they are the same type
 many times) with just the one mock object which is programmed to act as discrete
 iterated elements.
@@ -184,13 +183,13 @@ that are not the default in Mockery.
 \Mockery::mock('MyClass')->shouldIgnoreMissing()
 ```
 
-The use of the shouldIgnoreMissing() behaviour modifier will label this mock object
+The use of the `shouldIgnoreMissing()` behaviour modifier will label this mock object
 as a Passive Mock. In such a mock object, calls to methods which are not covered by
-expectations will return NULL
-instead of the usual complaining about there being no expectation matching the call.
+expectations will return `NULL` instead of the usual complaining about there
+being no expectation matching the call.
 
-You can optionally prefer to return an object of type \Mockery\Undefined (i.e.
-a null object) (which was the 0.7.2 behaviour) by using an additional modifier:
+You can optionally prefer to return an object of type `\Mockery\Undefined` (i.e.
+a `null` object) (which was the 0.7.2 behaviour) by using an additional modifier:
 
 ```PHP
 \Mockery::mock('MyClass')->shouldIgnoreMissing()->asUndefined()
@@ -211,6 +210,6 @@ also
 
 Known as a Passive Partial Mock (not to be confused with real partial mock objects
 discussed later), this form of mock object will defer all methods not subject to
-an expectation to the parent class of the mock, i.e. MyClass. Whereas the previous
-shouldIgnoreMissing() returned NULL, this behaviour simply
-calls the parent's matching method.
+an expectation to the parent class of the mock, i.e. `MyClass`. Whereas the previous
+`shouldIgnoreMissing()` returned `NULL`, this behaviour simply calls the parent's
+matching method.
