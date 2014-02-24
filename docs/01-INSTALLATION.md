@@ -1,17 +1,16 @@
 # Installation
 
-
-Mockery may be installed using Composer, PEAR or by cloning it from its GitHub repository.
+Mockery can be installed using Composer, PEAR or by cloning it from its GitHub repository.
 These three options are outlined below.
 
 
 ## Composer
 
-You can read more about Composer and its [main repository](https://github.com/composer/composer).
-To install Mockery using Composer, first install Composer for your project using the instructions
-on the [Packagist](https://packagist.org) home page. You can then define your development
-dependency on Mockery using the suggested parameters below. While every effort is made to keep
-the master branch stable, you may prefer to use the current stable version tag instead.
+You can read more about Composer on [getcomposer.org](https://getcomposer.org). To install Mockery
+using Composer, first install Composer for your project using the instructions on the
+[Composer download page](https://getcomposer.org/download/). You can then define your development
+dependency on Mockery using the suggested parameters below. While every effort is made to keep the
+master branch stable, you may prefer to use the current stable version tag instead.
 
     {
         "require-dev": {
