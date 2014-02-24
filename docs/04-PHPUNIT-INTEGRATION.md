@@ -1,7 +1,6 @@
 # PHPUnit Integration
 
-
-Mockery was designed as a simple to use standalone mock object framework, so
+Mockery was designed as a simple-to-use *standalone* mock object framework, so
 its need for integration with any testing framework is entirely optional.
 To integrate Mockery, you just need to define a tearDown() method for your
 tests containing the following (you may use a shorter \Mockery namespace alias):
